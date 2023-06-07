@@ -1,4 +1,4 @@
-package services;
+package JAVAU2W2D3.services;
 
 import java.util.List;
 import java.util.UUID;
@@ -9,9 +9,9 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
-import entities.Edificio;
-import exceptions.NotFoundException;
-import repositories.EdificiRepository;
+import JAVAU2W2D3.entities.Edificio;
+import JAVAU2W2D3.exceptions.NotFoundException;
+import JAVAU2W2D3.repositories.EdificiRepository;
 
 @Service
 public class EdificiService {
@@ -27,8 +27,8 @@ public class EdificiService {
 		return edificiRepo.findAll();
 	}
 
-	public Edificio findByNameIgnoreCase(String name) throws NotFoundException {
-		return edificiRepo.findByNameIgnoreCase(name).orElseThrow(() -> new NotFoundException(name));
+	public Edificio findByNameIgnoreCase(String nome) throws NotFoundException {
+		return edificiRepo.findByNameIgnoreCase(nome).orElseThrow(() -> new NotFoundException(nome));
 	}
 
 	public Edificio findById(UUID id) throws Exception {

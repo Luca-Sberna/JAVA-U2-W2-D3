@@ -1,4 +1,4 @@
-package exceptions;
+package JAVAU2W2D3.exceptions;
 
 public class BadRequestException extends RuntimeException {
 

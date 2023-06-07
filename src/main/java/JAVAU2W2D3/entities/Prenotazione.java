@@ -1,4 +1,4 @@
-package entities;
+package JAVAU2W2D3.entities;
 
 import java.time.LocalDate;
 import java.util.UUID;

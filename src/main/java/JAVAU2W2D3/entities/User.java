@@ -1,4 +1,4 @@
-package entities;
+package JAVAU2W2D3.entities;
 
 import java.util.UUID;
 
@@ -16,7 +16,7 @@ import lombok.NoArgsConstructor;
 public class User {
 	@Id
 	@GeneratedValue
-	private UUID id;
+	private UUID utenteId;
 	private String name;
 	private String surname;
 	private String email;

@@ -1,4 +1,4 @@
-package controllers;
+package JAVAU2W2D3.controllers;
 
 import java.util.List;
 import java.util.UUID;
@@ -16,8 +16,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import entities.Edificio;
-import services.EdificiService;
+import JAVAU2W2D3.entities.Edificio;
+import JAVAU2W2D3.services.EdificiService;
 
 @RestController
 @RequestMapping("/edifici")

@@ -1,4 +1,4 @@
-package services;
+package JAVAU2W2D3.services;
 
 import java.util.List;
 import java.util.UUID;
@@ -9,9 +9,9 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
-import entities.Postazione;
-import exceptions.NotFoundException;
-import repositories.PostazioniRepository;
+import JAVAU2W2D3.entities.Postazione;
+import JAVAU2W2D3.exceptions.NotFoundException;
+import JAVAU2W2D3.repositories.PostazioniRepository;
 
 @Service
 public class PostazioniService {

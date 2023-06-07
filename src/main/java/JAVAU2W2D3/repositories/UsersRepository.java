@@ -1,4 +1,4 @@
-package repositories;
+package JAVAU2W2D3.repositories;
 
 import java.util.Optional;
 import java.util.UUID;
@@ -6,7 +6,7 @@ import java.util.UUID;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import entities.User;
+import JAVAU2W2D3.entities.User;
 
 @Repository
 public interface UsersRepository extends JpaRepository<User, UUID> {

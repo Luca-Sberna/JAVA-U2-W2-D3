@@ -1,4 +1,4 @@
-package controllers;
+package JAVAU2W2D3.controllers;
 
 import java.util.List;
 import java.util.UUID;
@@ -17,9 +17,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import entities.User;
-import payloads.UserRegistrationPayload;
-import services.UsersService;
+import JAVAU2W2D3.entities.User;
+import JAVAU2W2D3.payloads.UserRegistrationPayload;
+import JAVAU2W2D3.services.UsersService;
 
 @RestController
 @RequestMapping("/users")

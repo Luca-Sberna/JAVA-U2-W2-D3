@@ -1,4 +1,4 @@
-package services;
+package JAVAU2W2D3.services;
 
 import java.util.List;
 import java.util.UUID;
@@ -9,8 +9,8 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
-import entities.Prenotazione;
-import repositories.PrenotazioniRepository;
+import JAVAU2W2D3.entities.Prenotazione;
+import JAVAU2W2D3.repositories.PrenotazioniRepository;
 
 @Service
 public class PrenotazioniService {

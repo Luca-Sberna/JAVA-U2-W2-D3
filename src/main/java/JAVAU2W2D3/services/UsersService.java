@@ -1,4 +1,4 @@
-package services;
+package JAVAU2W2D3.services;
 
 import java.util.List;
 import java.util.UUID;
@@ -9,10 +9,10 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
-import entities.User;
-import exceptions.BadRequestException;
-import payloads.UserRegistrationPayload;
-import repositories.UsersRepository;
+import JAVAU2W2D3.entities.User;
+import JAVAU2W2D3.exceptions.BadRequestException;
+import JAVAU2W2D3.payloads.UserRegistrationPayload;
+import JAVAU2W2D3.repositories.UsersRepository;
 
 @Service
 public class UsersService {
@@ -43,7 +43,7 @@ public class UsersService {
 	public User findByIdAndUpdate(UUID id, User u) throws Exception {
 		User found = this.findById(id);
 
-		found.setId(id);
+		found.setUtenteId(id);
 		found.setName(u.getName());
 		found.setSurname(u.getSurname());
 		found.setEmail(u.getEmail());
