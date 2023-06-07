@@ -28,7 +28,7 @@ public class EdificiService {
 	}
 
 	public Edificio findByNameIgnoreCase(String nome) throws NotFoundException {
-		return edificiRepo.findByNameIgnoreCase(nome).orElseThrow(() -> new NotFoundException(nome));
+		return edificiRepo.findByNomeIgnoreCase(nome).orElseThrow(() -> new NotFoundException(nome));
 	}
 
 	public Edificio findById(UUID id) throws Exception {
@@ -40,8 +40,7 @@ public class EdificiService {
 		found.setId(e.getId());
 		found.setNome(e.getNome());
 		found.setIndirizzo(e.getIndirizzo());
-		found.setCittà(e.getCittà());
-		found.setPostazioni(e.getPostazioni());
+		found.setCitta(e.getCitta());
 		return edificiRepo.save(found);
 
 	}

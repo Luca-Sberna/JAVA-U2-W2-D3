@@ -3,9 +3,9 @@ package JAVAU2W2D3.entities;
 import java.time.LocalDate;
 import java.util.UUID;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
@@ -16,14 +16,22 @@ import lombok.Data;
 @Data
 public class Prenotazione {
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue
 	private UUID id;
+	private LocalDate data;
 
-	@ManyToOne
+	@ManyToOne(cascade = CascadeType.ALL)
 	private User utente;
 
-	@ManyToOne
+	@ManyToOne(cascade = CascadeType.ALL)
 	private Postazione postazione;
 
-	private LocalDate data;
+	public Prenotazione(UUID id, LocalDate data, User utente, Postazione postazione) {
+		super();
+		this.id = id;
+		this.data = data;
+		this.utente = utente;
+		this.postazione = postazione;
+	}
+
 }

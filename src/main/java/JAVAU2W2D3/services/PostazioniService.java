@@ -27,8 +27,8 @@ public class PostazioniService {
 		return postazioniRepo.findAll();
 	}
 
-	public Postazione findByPostazioneIgnoreCase(String codice) throws NotFoundException {
-		return postazioniRepo.findByNameIgnoreCase(codice).orElseThrow(() -> new NotFoundException(codice));
+	public Postazione findByDescrizioneIgnoreCase(String descrizione) throws NotFoundException {
+		return postazioniRepo.findByDescrizioneIgnoreCase(descrizione);
 	}
 
 	public Postazione findById(UUID id) throws Exception {
@@ -37,7 +37,6 @@ public class PostazioniService {
 
 	public Postazione findByIdAndUpdate(UUID id, Postazione p) throws Exception {
 		Postazione found = this.findById(id);
-		found.setCodice(p.getCodice());
 		found.setDescrizione(p.getDescrizione());
 		found.setTipo(p.getTipo());
 		found.setMaxOccupanti(p.getMaxOccupanti());
